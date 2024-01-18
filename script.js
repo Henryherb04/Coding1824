@@ -1,16 +1,16 @@
 const numberBox = document.getElementById('guess');
-const numberBox = getelementbyId('feedback');
+const feedbackBox = getelementbyId('feedback');
 
 const newNumber = Math.floor(Math.random()*100);
 
 numberBox.addEventListener('change', checkNumber);
 
 function checkNumber() {
-    const guess = numberBox.ariaValueMax;
+    const guess = numberBox.value;
     if (guess < newNumber) {
         feedbackBox.innerText = "TOO LOW";      
     }
-    esle if (guess > newNumber) {
+    else if (guess > newNumber) {
         feedbackBox.innerText = "too high";
     }
     else {
