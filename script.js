@@ -1,5 +1,5 @@
 const numberBox = document.getElementById('guess');
-const feedbackBox = getelementbyId('feedback');
+const feedbackBox = document.getElementById('feedback');
 
 const newNumber = Math.floor(Math.random()*100);
 
@@ -8,12 +8,12 @@ numberBox.addEventListener('change', checkNumber);
 function checkNumber() {
     const guess = numberBox.value;
     if (guess < newNumber) {
-        feedbackBox.innerText = "TOO LOW";      
+        feedbackBox.innerText = "THATS WAY TOO LOW WHAT DO YOU THINK THIS IS";      
     }
     else if (guess > newNumber) {
-        feedbackBox.innerText = "too high";
+        feedbackBox.innerText = "I'm not a robber I'll sell the stolen car for cheaper";
     }
     else {
-        feedbackBox.innerText = "thats just RIGHT";
+        feedbackBox.innerText = "DEAL";
     }
 }
